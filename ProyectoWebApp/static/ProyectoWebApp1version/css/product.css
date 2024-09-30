@@ -1,0 +1,104 @@
+.container {
+  max-width: 960px;
+}
+
+.icon-link > .bi {
+  width: .75em;
+  height: .75em;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 5%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: rgba(63, 130, 168, 0.726);
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  /*background-color: rgb(83, 27, 27);*/
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #1c1d5c;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+
+.contenedorFormulario{
+
+  background-color: rgb(40, 141, 209);
+
+  width: 50%;
+
+  margin: 10px auto;
+
+  border-radius: 5px;
+
+  padding: 1px 0px;
+
+}
+
+
+.fondocontainer {
+  background-image: url('media/bannerinferior/USAC2nofondo.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Para asegurar que la imagen cubra todo el contenedor */
+  background-position: center; /* Para centrar la imagen en el contenedor */
+  background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+}
+
+
+.barra {
+  width: 100%; /* Ancho del 100% para ocupar toda la ventana */
+  height: 20px; /* Altura de la barra */
+  background-color: #20bb5b73; /* Color de fondo de la barra */
+}

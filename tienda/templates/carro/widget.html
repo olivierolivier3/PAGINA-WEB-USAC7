@@ -1,0 +1,106 @@
+<table class="table table-bordered" style="color: white;">
+
+    <thread>
+        <tr>
+
+            <th colspan="3" class="text-center">
+
+               Asignacion de cursos
+
+
+            </th>
+
+
+
+        </tr>
+
+        <tr>
+            <th>Curso</th>
+        
+            <th>Precio del curso</th>
+
+
+
+        </tr>
+    </thread>
+
+    <tbody>
+        {% if request.session.carro.items %}
+            {% for key, value in request.session.carro.items %}
+                <tr class="text-center">
+
+                    <td>{{value.nombre}}</td>
+                    
+                    <td>
+
+                       
+                        <a href="{% url 'carro:restar' value.producto_id %}" class="btn btn-sm btn-success">-</a><br/>
+
+                        {{value.precio}} Q
+
+
+                    </td>
+
+                </tr>
+
+
+            {% endfor %}
+
+
+        {% else %}
+        <tr>
+
+
+            <td colspan="3">
+                <div class="alert alert-danger text-center">
+
+                    Sin productos
+
+
+                </div>
+
+
+            </td>
+
+
+
+        </tr>
+        {% endif %}
+    </tbody>
+
+
+
+<tfoot>
+    <tr>
+        <td colspan="3">
+
+            Total: {{importe_total_carro}} Q
+
+
+    </tr>
+
+
+    {% if request.session.carro.items %}<!-- Si el usuario logueado tiene articulos en el carro -->
+        <tr>
+            <td colspan="3" style="text-align: center;">
+            
+            <a href="../pedidos" class="btn btn-success">Asignar Cursos</a>
+            
+            
+            </td>
+        </tr>
+    {% endif %}
+
+
+
+
+</tfoot>
+
+
+
+
+
+
+
+
+</table>
